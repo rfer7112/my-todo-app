@@ -6,6 +6,7 @@ todos = functions.get_todos()
 
 def add_todo():
     todo = st.session_state['new_todo'] + '\n'
+    print(todo)
     todos.append(todo)
     functions.write_todos(todos)
 
@@ -23,4 +24,3 @@ for index, item in enumerate(todos):
         st.rerun()
 
 st.text_input(label="", placeholder="Enter a task", on_change=add_todo, key='new_todo')
-
