@@ -4,7 +4,6 @@ from PIL import Image
 with st.expander("Start Camera"):
     upload_image = st.file_uploader("Upload from device")
     camera_image = st.camera_input("Camera")
-    st.text_area("some text")
 
 if camera_image:
     img = Image.open(camera_image)
